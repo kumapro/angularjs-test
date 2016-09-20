@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="LunchCheckerApp">
+  <head>
+    <title>Lunch Checker</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+<body ng-controller="LunchCheckerController">
+   <div>
+     <h1>Lunch Checker</h1>
+         <div>
+             <input id="lunch-menu" type="text" ng-trim="true"
+             placeholder="list out all the dishes you wish to have in your lunch"
+             ng-model="lunchMenu" ng-keyup="splitMenue()">
+         </div>
+         <div>
+             <button ng-click="getComment()">Check If Too Much</button>
+         </div>
+         <div>
+           {{comments}}
+         </div>
+   </div>
+
+</body>
+</html>
